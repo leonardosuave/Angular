@@ -6,5 +6,7 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'primeiro-projeto';
+  //Aqui é setado os valores dos métodos que serão mostrados no interpolation do app.component.html
+
+  public title = 'Bem vindo'
 }
