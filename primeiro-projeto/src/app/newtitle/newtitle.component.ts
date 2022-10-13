@@ -1,11 +1,11 @@
-import { Component, Input, OnChanges, OnInit} from '@angular/core';
+import { Component, Input, OnChanges, OnDestroy, OnInit} from '@angular/core';
 
 @Component({
   selector: 'app-newtitle',
   templateUrl: './newtitle.component.html',
   styleUrls: ['./newtitle.component.scss']
 })
-export class NewtitleComponent implements OnInit, OnChanges {
+export class NewtitleComponent implements OnInit, OnChanges, OnDestroy {
   
   //Métodos
   //TS é tipádo, então deve passar o tipo do dado (string, number...)
@@ -23,7 +23,11 @@ export class NewtitleComponent implements OnInit, OnChanges {
   }
 
   ngOnChanges(): void {
-    alert('"Bem vindo denovo" foi alterado para "Olá Mundo"')
+    console.log('"Bem vindo denovo" foi alterado para "Olá Mundo"')
+  }
+
+  ngOnDestroy(): void {
+    console.log('Componente destruido!')
   }
 
 }

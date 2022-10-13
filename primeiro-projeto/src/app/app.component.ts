@@ -7,6 +7,10 @@ import { AfterContentChecked, AfterContentInit, AfterViewChecked, AfterViewInit,
     `<app-newtitle newtitle= "Olá mundo"></app-newtitle>
     {{valor}}
     <button (click)="adicionar()">Adicioanr</button>
+    <br>
+    <app-newtitle *ngIf="destruir"></app-newtitle>
+    <br>
+    <button (click)="destruirComponent()">Destruir componente</button>
     <router-outlet></router-outlet>`,
   
   //templateUrl: './app.component.html',
@@ -17,14 +21,18 @@ import { AfterContentChecked, AfterContentInit, AfterViewChecked, AfterViewInit,
 export class AppComponent implements DoCheck, AfterContentInit, AfterContentChecked, AfterViewInit, AfterViewChecked{
   //Aqui é setado os valores dos métodos que serão mostrados no interpolation do app.component.html
 
-  public valor: number = 25
   public title = 'Bem vindo'
+  public valor: number = 25
+  public destruir: boolean = true
 
   constructor() {
   }
 
   public adicionar(): number{
     return this.valor +=1
+  }
+  public destruirComponent() {
+    this.destruir = false
   }
 
   ngDoCheck(): void {
