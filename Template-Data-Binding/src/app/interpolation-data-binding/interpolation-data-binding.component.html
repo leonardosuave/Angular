@@ -1,8 +1,16 @@
 <h2>Interpolation</h2>
-<hr>
 <p>{{mensagem}}</p>
 <p>{{name}}, você tem mais que 25 anos?</p>
 <p>{{idade > 25}}</p>
 
 <p>Quanto é {{idade}} + 15?</p>
 <p>{{idade + 15}}</p>
+<hr>
+
+<h2>Property Binding</h2>
+<!--Os 2 botões abaixo possuem a mesma lógica, so que o ultimo que esta com Property Binding está com um método da class que é do tipo boolean e neste caso não precisa ser identificado true/false diretamente nessa propriedade do botão. O true e false é referenciado no valor do método, lá na class-->
+<button disabled="true">Button</button><br>
+<button [disabled]="checkedDisabled">Button</button>
+<hr>
+
+<h2>Event Binding</h2>

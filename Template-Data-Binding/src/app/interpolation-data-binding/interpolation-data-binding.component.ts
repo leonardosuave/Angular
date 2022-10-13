@@ -7,9 +7,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class InterpolationDataBindingComponent implements OnInit {
 
+  //Interpolation
   public mensagem:string = 'Olá, tudo bem?'
   public name:string = 'Leonardo'
   public idade:number = 26
+
+  //Property Binding
+  public checkedDisabled:boolean = true
 
   constructor() { }
 
