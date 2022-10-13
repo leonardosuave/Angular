@@ -1,3 +1,9 @@
+<!--
+    EXPLICAÇÃO -> 
+    Todas as componentes aqui serão exibidas na pagina correspondente.
+    Componentes inseridos diretamente em um DECORATOR de um componente será exibido apenas o primeiro.    
+-->
+
 <h1>{{ title }}</h1> <!--Interpolation que vai buscar o valor direto na class da componente do arquivo app.component.ts que corresponde ao método-->
-<app-newtitle></app-newtitle>
+<app-newtitle></app-newtitle> <!--Pode ser setado dado de input aqui para exibir todos os componentes-->
 <router-outlet></router-outlet> <!--Vai verificar se tem alguma rota de inicialização-->
