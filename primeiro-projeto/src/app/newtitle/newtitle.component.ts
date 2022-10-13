@@ -9,7 +9,6 @@ export class NewtitleComponent implements OnInit, OnChanges {
   
   //Métodos
   //TS é tipádo, então deve passar o tipo do dado (string, number...)
-
   @Input() public newtitle: string = "Bem vindo denovo" //Input para identificar dado externo.
 
   constructor() { }
