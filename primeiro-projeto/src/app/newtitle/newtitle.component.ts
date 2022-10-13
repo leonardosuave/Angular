@@ -14,6 +14,12 @@ export class NewtitleComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
+
+    console.log('Exemplo de ngOnInit()')
+
+    setTimeout(() => {
+      console.log('Exemplo de ngOnInit() com mensagem dentro de um setTimeout de 5s')
+    }, 5000);
   }
 
 }
