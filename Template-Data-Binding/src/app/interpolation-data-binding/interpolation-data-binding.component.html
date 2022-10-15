@@ -17,3 +17,9 @@
 <button (click)="alertaInfo($event)">Evento</button>
 <div (mousemove)="mouseMoveTest($event)" style="background: red; width: 300px; height: 300px"></div>
 {{ position.x }} - {{ position.y }} <!--Vai contar a posição do mouse no html-->
+<hr>
+
+<h2>Two-way binding</h2>
+<!--ngModel é utilizado como um forms para mudar valores através do input. Deve instalar de acordo com a documentação (utilizado FormsModule neste projeto)-->
+<input [(ngModel)]="name"> <!--Vai atualizar o valor da variavel 'name' reativamente em todos os campos do html que ela foi utilizado-->
+{{name}}
