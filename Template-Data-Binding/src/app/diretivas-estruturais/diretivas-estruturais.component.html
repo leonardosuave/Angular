@@ -16,3 +16,14 @@
     false
 </p>
 <button (click)="onClick()">Clicar</button>
+<hr>
+
+<h2>*ngFor</h2>
+<ul>
+    <!--Esta iterando o objeto dentro do array-->
+    <li *ngFor="let item of list; let i = index">[ {{i}} ]: Name: {{item.name}} - Idade: {{item.idade}} <button (click)="onClickEventDelete(i)">Deletar</button></li>
+</ul>
+<!--Para adicionar nome e idade ao array e listar-->
+<input [(ngModel)]="name">
+<input [(ngModel)]="idade">
+<button (click)="onClickAdd()">Adicionar</button>

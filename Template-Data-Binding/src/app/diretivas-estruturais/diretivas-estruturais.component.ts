@@ -7,8 +7,19 @@ import { Component, OnInit } from '@angular/core';
 })
 export class DiretivasEstruturaisComponent implements OnInit {
 
+  //*ngIf
   public condition: boolean = true
   public conditionClick: boolean = true
+
+  //*ngFor
+  public name:string = ''
+  public idade:number = 0
+
+  public list: Array<{name: string, idade: number}> = [
+    {name: 'Leonardo', idade: 26},
+    {name: 'Tassiane', idade: 29},
+    {name: 'Judite', idade: 2}
+  ]
 
   constructor() { }
 
@@ -24,13 +35,23 @@ export class DiretivasEstruturaisComponent implements OnInit {
       
     }, 2000)
   }
-  
+
   public onClick() {
     if(this.conditionClick) {
       this.conditionClick = false
     } else {
       this.conditionClick = true
     }
+  }
+
+  public onClickAdd() {
+    this.list.push({name: this.name, idade: this.idade})
+    this.name = ''
+    this.idade = 0
+  }
+
+  public onClickEventDelete(event: number) {
+    this.list.splice(event, 1)
   }
 
 }
