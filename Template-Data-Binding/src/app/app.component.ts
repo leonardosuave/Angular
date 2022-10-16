@@ -4,6 +4,7 @@ import { Component } from '@angular/core';
   selector: 'app-root',
   template: 
   ` <app-interpolation-data-binding></app-interpolation-data-binding>
+    <app-diretivas-estruturais></app-diretivas-estruturais>
     <router-outlet></router-outlet>
   `
 })

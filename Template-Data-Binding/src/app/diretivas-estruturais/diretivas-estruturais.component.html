@@ -1,0 +1,18 @@
+<hr>
+<h2>*ngIf</h2>
+<p *ngIf="true">True</p> <!--Vai aparecer no html-->
+<p *ngIf="condition; else elseBlock">Alguma coisa com condition</p>
+<ng-template #elseBlock>
+    <p>
+        false
+    </p>
+</ng-template>
+<br>
+
+<p *ngIf="conditionClick">
+    True
+</p>
+<p *ngIf="!conditionClick">
+    false
+</p>
+<button (click)="onClick()">Clicar</button>
