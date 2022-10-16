@@ -5,6 +5,7 @@ import { Component } from '@angular/core';
   template: 
   ` <app-interpolation-data-binding></app-interpolation-data-binding>
     <app-diretivas-estruturais></app-diretivas-estruturais>
+    <app-diretivas-atributos></app-diretivas-atributos>
     <router-outlet></router-outlet>
   `
 })
