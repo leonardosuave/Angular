@@ -14,12 +14,14 @@ export class DiretivasEstruturaisComponent implements OnInit {
   //*ngFor
   public name:string = ''
   public idade:number = 0
-
   public list: Array<{name: string, idade: number}> = [
     {name: 'Leonardo', idade: 26},
     {name: 'Tassiane', idade: 29},
     {name: 'Judite', idade: 2}
   ]
+
+  //*ngSwitch
+  public nameSwitch: string = 'Leonardo'
 
   constructor() { }
 

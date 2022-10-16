@@ -27,3 +27,15 @@
 <input [(ngModel)]="name">
 <input [(ngModel)]="idade">
 <button (click)="onClickAdd()">Adicionar</button>
+<hr>
+
+<h2>*ngSwitch</h2>
+<input type="text" [(ngModel)]="nameSwitch">
+<div [ngSwitch]="nameSwitch">
+    <p *ngSwitchCase="'Leonardo'">
+        Leonardo
+    </p>
+    <p *ngSwitchCase="'Tassiane'">
+        Tassiane
+    </p>
+</div>
