@@ -14,6 +14,12 @@ export class DiretivasAtributosComponent implements OnInit {
   public heightPx: string = "20px";
   public backgroudColor: string = "red"
 
+  //ngModel
+  public name: string = ''
+  public list: Array<{name: string}> = [
+    
+  ]
+
   constructor() { }
 
   ngOnInit(): void {
@@ -34,6 +40,10 @@ export class DiretivasAtributosComponent implements OnInit {
       }
     }, 2000)
 
+  }
+
+  public save() {
+    this.list.push({name: this.name})
   }
 
 }
