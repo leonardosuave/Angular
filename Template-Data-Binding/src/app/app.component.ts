@@ -17,6 +17,8 @@ import { Component } from '@angular/core';
     </app-diretivas-atributos>
 
     <app-diretivas-atributos></app-diretivas-atributos>
+
+    <app-new-component></app-new-component>
     <router-outlet></router-outlet>
   `
 })
