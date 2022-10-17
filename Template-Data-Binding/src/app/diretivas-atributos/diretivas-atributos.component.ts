@@ -17,7 +17,8 @@ export class DiretivasAtributosComponent implements OnInit {
   //ngModel
   public name: string = ''
   public list: Array<{name: string}> = [
-    
+    {name: 'Judite'},
+    {name: 'Neguinha'}
   ]
 
   constructor() { }
