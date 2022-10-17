@@ -1,3 +1,6 @@
+<hr>
+<ng-content select="h1"></ng-content>
+
 <!--ngClass e ngStyle-->
 <!--
 
@@ -23,3 +26,13 @@
     </p>
 
 </ng-template>
+
+<h2>ng-Content</h2>
+<ng-content select="h2"></ng-content>
+
+<hr>
+<h2>Pipes</h2>
+<input [(ngModel)]="name"><br>
+<button (click)="save()">Salvar</button>
+<li *ngFor="let item of list">{{item.name | uppercase}}</li> <!--Converte todo o laço em palavras com eltras maiusculas-->
+{{date | date: 'dd/MM/yyyy'}} <!--Pega o date e converte ele em um formato separado por dia/mês/ano-->

@@ -21,6 +21,9 @@ export class DiretivasAtributosComponent implements OnInit {
     {name: 'Neguinha'}
   ]
 
+  //Pipes
+  public date: Date = new Date()
+
   constructor() { }
 
   ngOnInit(): void {
