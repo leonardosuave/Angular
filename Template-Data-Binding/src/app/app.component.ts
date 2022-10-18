@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-root',
@@ -19,9 +19,41 @@ import { Component } from '@angular/core';
     <app-diretivas-atributos></app-diretivas-atributos>
 
     <app-new-component></app-new-component>
+
+    <app-input [contador]="addValue"></app-input>
+    <button (click)="add()">Add</button>
+
+    <ng-template [ngIf]="getDates">
+      <h1>{{getDates.name}}</h1>
+      <h2>{{getDates.age}}</h2>
+    </ng-template>
+    <app-output (enviarDates)="setDates($event)"></app-output>
+
     <router-outlet></router-outlet>
   `
 })
-export class AppComponent {
+
+
+
+export class AppComponent implements OnInit {
+
+  //Vai inserir dados no @Input contador
+  public addValue: number = 0
+
+  public getDates: {name: string, age:number} | undefined
+  
+
+  ngOnInit(): void { 
+  }
   title = 'Template-Data-Binding';
+
+  //Vai inserir dados no @Input contator
+  public add() {
+    this.addValue += 1;
+  }
+
+  public setDates(event: {name: string, age: number}) {
+    this.getDates = event
+  }
+  
 }
